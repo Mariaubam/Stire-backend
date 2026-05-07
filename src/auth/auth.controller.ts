@@ -50,9 +50,4 @@ export class AuthController {
     return this.authService.login(dto.email, dto.password);
   }
 
-  @ApiOperation({ summary: 'Crear usuarios de demo (admin, teacher, student)' })
-  @Post('seed')
-  seed() {
-    return this.authService.seed();
-  }
 }
