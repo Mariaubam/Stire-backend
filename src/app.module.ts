@@ -24,7 +24,7 @@ import { AuthModule } from './auth/auth.module';
         password: config.get('DB_PASSWORD', ''),
         database: config.get('DB_NAME', 'stire_db'),
         entities: [__dirname + '/**/*.entity{.ts,.js}'],
-        synchronize: config.get('NODE_ENV') !== 'production',
+        synchronize: true,
         logging: config.get('NODE_ENV') === 'development',
       }),
       inject: [ConfigService],
